@@ -209,6 +209,17 @@ button {
   color: var(--container-color);
 }
 
+.homeContent {
+  display: grid;
+  justify-content: center;
+  margin-top: var(--mb-2);
+}
+
+.titleHome {
+  font-family:var(--body-font);
+  letter-spacing: .10rem;
+}
+
 
 /*========== MEDIA QUERIES ==========*/
 

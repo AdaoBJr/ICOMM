@@ -31,7 +31,11 @@ export default function Home() {
           </p>
           <img src={img6} alt="imagem destaque 2" />
         </div>
+      </div>
 
+      {/* <!--========== CAROUSEL ==========--> */}
+      <div className="homeContent">
+        <h2 className="titleHome">DESTAQUES</h2>
       </div>
     </>
   );
