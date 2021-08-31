@@ -6,9 +6,9 @@ import store, {
   addTotalCart,
   CART, PRODUCTS, SCREEN, setFav, SET_SCREEN_CART, SET_SCREEN_FAV, SET_SCREEN_HOME,
 } from './store';
-import productsReducer from './reducers/products';
 import cartReducer from './reducers/cart';
 import screenReducer from './reducers/screen';
+import productsReducer from './reducers/products';
 import { getStorage } from '../functions';
 
 export default function Provider({ children }) {
@@ -29,7 +29,11 @@ export default function Provider({ children }) {
   useEffect(findLocation, [pathname]);
   useEffect(() => { setCart(addCart(getStorage('LScart'))); }, []);
   useEffect(() => { setCart(addTotalCart(getStorage('LScartSum'))); }, []);
-  useEffect(() => { setProducts(setFav(getStorage('LSfav'))); }, []);
+  useEffect(() => {
+    if (getStorage('LSfav').length) {
+      setProducts(setFav(getStorage('LSfav')));
+    }
+  }, []);
 
   // CONTEXT
   const contextValue = {
