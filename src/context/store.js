@@ -1,5 +1,6 @@
 // store = Context API
 import { createContext } from 'react';
+import clothes from '../services/index';
 
 // INITIAL STATES ----------------------------------------------------------------
 
@@ -10,8 +11,7 @@ export const SCREEN = {
 };
 
 export const PRODUCTS = {
-  allProducts: [],
-  products: [],
+  products: [...clothes],
   favorited: [],
 };
 
