@@ -8,7 +8,7 @@ import img4 from '../files/images/image_4.png';
 const clothes = [
   {
     id: 1,
-    title: 'MACACÃO FEMININO Maria FIló SOBREPOSIÇÃO',
+    title: 'MACACÃO FEMININO MARIA FILO SOBREPOSIÇÃO',
     price: 759.00,
     parcel: '12 X R$ 63,25',
     msg: 'VERÃO 2022',
@@ -44,7 +44,7 @@ const clothes = [
   },
   {
     id: 5,
-    title: 'MACACÃO FEMININO Maria FIló SOBREPOSIÇÃO',
+    title: 'MACACÃO FEMININO MARIA FILO SOBREPOSIÇÃO',
     price: 759.00,
     parcel: '12 X R$ 63,25',
     msg: 'VERÃO 2022',
@@ -80,7 +80,7 @@ const clothes = [
   },
   {
     id: 9,
-    title: 'MACACÃO FEMININO Maria FIló SOBREPOSIÇÃO',
+    title: 'MACACÃO FEMININO MARIA FILO SOBREPOSIÇÃO',
     price: 759.00,
     parcel: '12 X R$ 63,25',
     msg: 'VERÃO 2022',
