@@ -1,17 +1,18 @@
 import React from 'react';
 
 import Header from '../components/Header';
+import ProductCard from '../components/ProductCard';
 import img5 from '../../files/images/image_5.png';
 import img6 from '../../files/images/image_6.png';
 
 export default function Home() {
   const renderHome = () => (
-    <>
+    <main>
       {/* <!--========== HEADER ==========--> */}
       <Header />
 
       {/* <!--========== IMAGES ==========--> */}
-      <div className="topImages">
+      <section className="topImages">
         <div>
           <p className="titleTopImg">
             ÍRIS
@@ -31,13 +32,14 @@ export default function Home() {
           </p>
           <img src={img6} alt="imagem destaque 2" />
         </div>
-      </div>
+      </section>
 
       {/* <!--========== CAROUSEL ==========--> */}
-      <div className="homeContent">
+      <section className="homeContent">
         <h2 className="titleHome">DESTAQUES</h2>
-      </div>
-    </>
+        <ProductCard />
+      </section>
+    </main>
   );
 
   return (
