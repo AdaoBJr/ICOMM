@@ -4,7 +4,7 @@
 
 /*===== VARIABLES CSS =====*/
 :root {
-  --header-height: 3rem;
+  --header-height: 3.5rem;
   --heart-height: 45px;
 
   /*========== Colors ==========*/
@@ -185,4 +185,38 @@ button {
 .navList {
   display: flex;
   align-items: center;
+}
+
+/*========== HOME ==========*/
+.topImages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: calc(var(--header-height) + 1.5rem);
+}
+
+.topImages div img {
+  margin-left: var(--mb-1);
+}
+
+.titleTopImg {
+  position: relative;
+  top: 10rem;
+  left: 4rem;
+  font-family: var(--logo-font);
+  font-weight: var(--font-bold);
+  letter-spacing: .35rem;
+  color: var(--container-color);
+}
+
+
+/*========== MEDIA QUERIES ==========*/
+
+@media screen and (min-width: 768px){
+
+  /*========== HOME ==========*/
+  .topImages {
+    flex-direction: row;
+
+  }
 }
