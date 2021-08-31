@@ -34,6 +34,62 @@ const clothes = [
     msg: 'LANÇAMENTO',
     image: img4,
   },
+  {
+    title: 'MACACÃO FEMININO Maria FIló SOBREPOSIÇÃO',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: 'VERÃO 2022',
+    image: img1,
+  },
+  {
+    title: 'REGATA FEMININA DE TRICOT COM OMBREIRA',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: '20% OFF',
+    image: img2,
+  },
+  {
+    title: 'BLUSA FEMININA SILK MERCI',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: '',
+    image: img3,
+  },
+  {
+    title: 'BLAZER FEMININO LIOCEL PUNHO',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: 'LANÇAMENTO',
+    image: img4,
+  },
+  {
+    title: 'MACACÃO FEMININO Maria FIló SOBREPOSIÇÃO',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: 'VERÃO 2022',
+    image: img1,
+  },
+  {
+    title: 'REGATA FEMININA DE TRICOT COM OMBREIRA',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: '20% OFF',
+    image: img2,
+  },
+  {
+    title: 'BLUSA FEMININA SILK MERCI',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: '',
+    image: img3,
+  },
+  {
+    title: 'BLAZER FEMININO LIOCEL PUNHO',
+    price: 759.00,
+    parcel: '12 X R$ 63,25',
+    msg: 'LANÇAMENTO',
+    image: img4,
+  },
 ];
 
 export default clothes;
