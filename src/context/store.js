@@ -1,6 +1,6 @@
 // store = Context API
 import { createContext } from 'react';
-import clothes from '../services/index';
+import clothes from '../services';
 
 // INITIAL STATES ----------------------------------------------------------------
 
@@ -12,7 +12,6 @@ export const SCREEN = {
 
 export const PRODUCTS = {
   products: [...clothes],
-  favorited: [],
 };
 
 export const CART = {
@@ -31,17 +30,13 @@ export default store;
 
 // ACTIONS -----------------------------------------------------------------------
 
-// USER
-export const ADD_PRODUCTS = 'ADD_PRODUCTS'; // ACTION -> ADD_PRODUCTS
-export const addProducts = (allProducts, products) => ({ // ACTION-CREATOR -> ADD_PRODUCTS
-  type: ADD_PRODUCTS, payload: { allProducts, products },
-});
-
+// PRODUCTS
 export const SET_FAVORITE = 'SET_FAVORITE'; // ACTION -> SET_FAVORITE
-export const setFav = (favorited) => ({ // ACTION-CREATOR -> SET_FAVORITE
-  type: SET_FAVORITE, payload: { favorited },
+export const setFav = (products) => ({ // ACTION-CREATOR -> SET_FAVORITE
+  type: SET_FAVORITE, payload: { products },
 });
 
+// CART
 export const ADD_CART = 'ADD_CART'; // ACTION -> ADD_PRODUCTS
 export const addCart = (cart) => ({ // ACTION-CREATOR -> ADD_PRODUCTS
   type: ADD_CART, payload: { cart },
@@ -52,6 +47,7 @@ export const addTotalCart = (totalCart) => ({ // ACTION-CREATOR -> ADD_TOTAL_CAR
   type: ADD_TOTAL_CART, payload: { totalCart },
 });
 
+// SCREEN
 export const SET_SCREEN_HOME = 'SET_SCREEN_HOME'; // ACTION -> SET_SCREEN_HOME
 export const SET_SCREEN_FAV = 'SET_SCREEN_FAV'; // ACTION -> SET_SCREEN_FAV
 export const SET_SCREEN_CART = 'SET_SCREEN_CART'; // ACTION -> SET_SCREEN_CART
