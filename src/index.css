@@ -4,7 +4,7 @@
 
 /*===== VARIABLES CSS =====*/
 :root {
-  --header-height: 9rem;
+  --header-height: 3rem;
   --heart-height: 45px;
 
   /*========== Colors ==========*/
@@ -20,11 +20,12 @@
   /*========== Font and typography ==========*/
   --body-font: 'Nunito', sans-serif;
   --logo-font: 'Montserrat', sans-serif;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
   --biggest-font-size: 2rem;
-  --h2-font-size: 2.5rem;
-  --h3-font-size: 2.25rem;
-  --normal-font-size: 1rem;
-  --small-font-size: .938rem;
+  --normal-font-size: .938rem;
+  --normal2-font-size: 1.3rem;
+  --small-font-size: .813rem;
 
   /*========== Font weight ==========*/
   --font-semi-bold: 600;
@@ -50,10 +51,6 @@
 /*========== BASE ==========*/
 *,::before,::after {
   box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
 }
 
 body {
@@ -168,15 +165,16 @@ button {
 }
 
 .navLogo img {
-  width: 4.5rem;
-  margin-right: 1.5rem;
+  width: 1.3rem;
+  margin-right: .5rem;
 }
 
 .navLink, .navIcon {
   color: var(--container-color);
   font-weight: var(--font-semi-bold);
-  font-size: 2.5rem;
+  font-size: var(--normal2-font-size);
   margin-left: var(--mb-1);
+  margin-top: var(--mb-05);
   transition: .5s;
 }
 
