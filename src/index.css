@@ -189,22 +189,24 @@ button {
 
 /*========== HOME ==========*/
 .topImages {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-top: calc(var(--header-height) + 1.5rem);
+  display: grid;
+  margin-top: 1rem;
+  width: 100vh;
 }
 
 .topImages div img {
-  margin-left: var(--mb-1);
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  width: 100%;
 }
 
 .titleTopImg {
   position: relative;
-  top: 10rem;
+  top: 14rem;
   left: 4rem;
   font-family: var(--logo-font);
   font-weight: var(--font-bold);
+  font-size: var(--mb-2);
   letter-spacing: .35rem;
   color: var(--container-color);
 }
@@ -218,6 +220,8 @@ button {
 .titleHome {
   font-family:var(--body-font);
   letter-spacing: .10rem;
+  margin-bottom: var(--mb-1);
+  text-align: center;
 }
 
 .homeContainer {
@@ -343,26 +347,48 @@ button {
 
 .arrowPage {
   font-size: 1.9rem;
+  width: 40px;
+  height: 55px;
+  color: var(--container-color);
 }
 
 .numPage {
   font-size: 1.2rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  color: #C4C4C4;
+  margin-left: 5px;
+  user-select: none;
 }
 
 .arrowPage, .numPage {
   text-align: center;
   vertical-align: middle;
-  background-color: var(--first-color-dark);
-  color: #FFF;
-  width: 40px;
-  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2),
-              0 -2px 3px rgba(0, 0, 0, 0.2);
+  background-color: #C4C4C4;
   cursor: pointer;
   transition: 0.5s;
 }
 
-.numPage:hover, .arrowPage:hover, .atualPg {
-  background-color: var(--first-color-darken);
+.atualPg {
+  color: var(--first-color-dark);
+  user-select: none;
+}
+
+.arrowPage:hover, .atualPg {
+  background-color: var(--first-color-dark);
+}
+
+.arrowLeft {
+  position: relative;
+  top: -20rem;
+  left: -31rem;
+}
+
+.arrowRight {
+  position: relative;
+  top: -20rem;
+  right: -32rem;
 }
 
 
@@ -373,7 +399,20 @@ button {
 
   /*========== HOME ==========*/
   .topImages {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: var(--mb-1);
+    margin: var(--mb-1) auto;
+  }
+  
+  .topImages div img {
+    margin-left: var(--mb-1);
+    margin-right: 0;
+  }
 
+  .titleTopImg {
+    top: 8rem;
+    left: 4rem;
+    font-size: var(--normal-font-size);
   }
 }
