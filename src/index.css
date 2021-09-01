@@ -356,7 +356,8 @@ button {
   font-size: 1.9rem;
   width: 50px;
   height: 65px;
-  color: var(--container-color);
+  color: var(--title-color);
+  background-color: transparent;
 }
 
 .numPage {
@@ -364,6 +365,7 @@ button {
   width: 20px;
   height: 20px;
   border-radius: 50%;
+  background-color: #C4C4C4;
   color: #C4C4C4;
   margin-left: 5px;
   user-select: none;
@@ -372,7 +374,6 @@ button {
 .arrowPage, .numPage {
   text-align: center;
   vertical-align: middle;
-  background-color: #C4C4C4;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -389,13 +390,13 @@ button {
 .arrowLeft {
   position: relative;
   top: -20rem;
-  left: 1.5rem;
+  left: 5rem;
 }
 
 .arrowRight {
   position: relative;
   top: -20rem;
-  right: .5rem;
+  right: 4rem;
 }
 
 
@@ -432,6 +433,8 @@ button {
   .arrowPage {
     width: 40px;
     height: 55px;
+    background-color: #C4C4C4;
+    color: var(--container-color);
   }
 
   .arrowLeft {
