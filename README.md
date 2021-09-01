@@ -1,70 +1,87 @@
-# Getting Started with Create React App
+<p align="center"><img width='150px' src='https://github.com/AdaoBJr/GoShoesRedux/blob/main/src/files/images/shoes-animation.gif' />
+<h1 align="center"> ICOMM e-commerce - Responsive Page </h1>
+<h2 align="center">GitHub Pages:</h2>
+ 
+ <div align="center">
+   <a href="http://adaobjr.github.io/ICOMM/" target="_blank">
+    <img width='100px' src='https://image.flaticon.com/icons/png/512/5222/5222347.png' target="_blank" />
+ </div>
+ 
+<h5 align="center">Clique na imagem</h5>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🧑🏻‍💻👩🏾‍💻Desenvolvido por
 
-## Available Scripts
+@[AdaoBJr](https://github.com/AdaoBJr)
+<br>
 
-In the project directory, you can run:
 
-### `npm start`
+---
+## 💡 Sobre o Projeto
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+O ICOMM e-commerce é uma versão simplificada, sem persistência no banco de dados, de uma **Loja Online de Roupas**.
+A partir dessas demandas, desenvolvi uma aplicação onde os usuários poderão:
+  - Visualizar os produtos presentes na base de dados;
+  - Interagir com os produtos recebidos de modo a adicioná-los ao carrinho de compras e favoritos;
+  - Caso algum produto seja adicionado ao carrinho de compras e/ou favoritos o usuário poderá visualizar o indicativo de item adicionado no canto superior direito do header, com a presença da quantidade de produtos no carrinho e o preenchimento do icone do coração;
+  - Interagir com os produtos através do carousel;
+  - E por fim, utilizar a aplicação de forma responsiva tanto em aparelhos mobiles quanto desktops.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<details>
+  <summary>Detalhes do Desafio</summary>
+  
+  # ICOMM Group
 
-### `npm test`
+  ## O Teste
+  
+  - Utilize React;
+  - Monte a estrutura de dados mock;
+  - Utilize alguma lib de slider ou carousel;
+  - Faça responsivo;
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+  Diferencial, não obrigatório
+  - Crie um controle de estado para o carrinho com context api do React;
+  - Faça deploy do app em algum serviço de cloud como netlify, vercel ou github-pages;
+  
+  <div align="left">
+   <a href="https://www.figma.com/file/wkI0KBTW5lcpk3WUoyBJWu/Teste-Frontend?node-id=0%3A1" target="_blank">
+     <p>Protótipo </p>
+ </div>
+</details>
 
-### `npm run build`
+## 🗺 Roteiro de Desenvolvimento
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Fiz a análise dos requisitos presentes no modelo de negócio do desafio;
+2. Fiz uma análise em todos os elementos do protótipo a fim de conhecer suas dimensões, cores e posições; 
+3. A partir das análises, iniciei o desenvolvimento da aplicação.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🛠 Tecnologias Usadas
+- HTML5
+- CSS3
+- Javascript
+- React.Js
+- React Router
+- Hooks
+- ContextAPI
+- useReducer
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🎲 Base de dados
 
-### `npm run eject`
+A base de dados da aplicação foi mockada com base nas imagens e textos provenientes do protótipo.
+  <div align="left">
+   <a href="https://www.figma.com/file/wkI0KBTW5lcpk3WUoyBJWu/Teste-Frontend?node-id=0%3A1" target="_blank">
+     <p> Link para o Protótipo </p>
+ </div>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🧙‍♂️ Como Iniciar o Projeto
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Primeiro faça a clonagem do projeto em algum diretorio do seu computador:
+```bash
+> cd "users/usuario/desktop/icomm"
+> git clone https://github.com/AdaoBJr/ICOMM.git
+```
+Depois disso instale as dependências:
+```bash
+> npm install install
+```
+O projeto vai iniciar em http://localhost:3000.
