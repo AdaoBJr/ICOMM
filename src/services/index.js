@@ -26,7 +26,7 @@ const clothes = [
   },
   {
     id: 3,
-    title: 'BLUSA FEMININA SILK MERCI',
+    title: 'BLUSA FEMININA SILK MERCI LIOCEL',
     price: 759.00,
     parcel: '12 X R$ 63,25',
     msg: '',
@@ -62,7 +62,7 @@ const clothes = [
   },
   {
     id: 7,
-    title: 'BLUSA FEMININA SILK MERCI',
+    title: 'BLUSA FEMININA SILK MERCI LIOCEL',
     price: 759.00,
     parcel: '12 X R$ 63,25',
     msg: '',
@@ -98,7 +98,7 @@ const clothes = [
   },
   {
     id: 11,
-    title: 'BLUSA FEMININA SILK MERCI',
+    title: 'BLUSA FEMININA SILK MERCI LIOCEL',
     price: 759.00,
     parcel: '12 X R$ 63,25',
     msg: '',
