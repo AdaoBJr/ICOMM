@@ -12,6 +12,13 @@ export default function ProductCard() {
     setCart,
   } = useContext(store);
 
+  const classMsgProduct = (msg) => {
+    if (msg === 'VERÃO 2022') { return 'msgSummer'; }
+    if (msg === 'LANÇAMENTO') { return 'msgLaunch'; }
+    if (msg === '20% OFF') { return 'msgOff'; }
+    return '';
+  };
+
   const renderProductCard = () => (
     products.map((product) => {
       const {
@@ -21,7 +28,7 @@ export default function ProductCard() {
       return (
         <section key={id} className="cardContent">
           <div className="topCard">
-            <p>{msg}</p>
+            <p className={classMsgProduct(msg)}>{msg}</p>
             <button
               type="button"
               className="favoritedBtn"
@@ -31,7 +38,7 @@ export default function ProductCard() {
             </button>
           </div>
           <div className="middleCard">
-            <img src={image} alt="imagem do produto" />
+            <img src={image} alt="imagem do produto" className="imgCard" />
             <h3 className="titleCard">{title}</h3>
             <div className="priceCard">
               {`R$ ${price
@@ -40,7 +47,7 @@ export default function ProductCard() {
             <p className="parcelCard">{parcel}</p>
           </div>
           {(!carT) ? (
-            <div className="bottomCard">
+            <div className="buttonCard">
               <button
                 type="button"
                 className="buyBtn"

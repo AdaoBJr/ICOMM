@@ -220,6 +220,122 @@ button {
   letter-spacing: .10rem;
 }
 
+.cartContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 430px;
+  margin-left: var(--mb-1);
+  background-color: var(--container-color);
+  border: 1px solid #EEEEEE;
+  transition: .5s;
+  margin-bottom: var(--mb-4);
+}
+
+.cardContent:hover {
+  height: 510px;
+  margin-bottom: 0;
+}
+
+.topCard, .middleCard, .buttonCard {
+  width: calc(100% - 1rem);
+}
+
+.topCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--mb-2);
+  transition: .5s;
+}
+
+.msgSummer, .msgLaunch, .msgOff {
+  font-size: 0.6rem;
+  padding: 5px;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+}
+
+.msgOff {
+  background-color: #EBD7CE;
+  border: 1px solid #EBD7CE;
+}
+
+.msgLaunch {
+  background-color: #824D3E;
+  border: 1px solid #824D3E;
+  color: var(--container-color);
+}
+
+.favoritedBtn {
+  color: var(--second-color);
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.middleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.imgCard {
+  align-self: center;
+  height: 285px;
+}
+
+.titleCard, .parcelCard {
+  font-size: var(--small-font-size);
+  color: var(--text-color);
+  letter-spacing: .1rem;
+  margin-top: 3px;
+  transition: .5s;
+}
+
+.priceCard {
+  font-size: calc(var(--small-font-size) + 2px);
+  margin-top: var(--mb-05);
+  font-weight: var(--font-bold);
+}
+
+.buyBtn {
+  background-color: var(--first-color);
+  color: var(--container-color);
+  font-family: var(--logo-font);
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 1px;
+  width: 100%;
+  padding: .75rem 0;
+  cursor: pointer;
+  transition: .5s;
+  opacity: 0;
+}
+
+.buyBtn:hover {
+  color: var(--title-home-color);
+}
+
+.cardContent:hover .buyBtn {
+  opacity: 1;
+}
+
+.cardContent:hover .parcelCard {
+  margin-bottom: var(--mb-1);
+}
+
+.cardContent:hover .topCard {
+  margin-top: -2rem;
+}
+
+
 
 /*========== MEDIA QUERIES ==========*/
 
