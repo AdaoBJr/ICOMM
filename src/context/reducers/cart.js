@@ -1,6 +1,4 @@
-import {
-  ADD_CART, ADD_TOTAL_CART,
-} from '../store';
+import { ADD_CART } from '../store';
 
 const cartReducer = (state, { type, payload }) => { // Desestruturação do Action
   switch (type) {
@@ -10,14 +8,6 @@ const cartReducer = (state, { type, payload }) => { // Desestruturação do Acti
         ...state,
         cart,
         updateSum: true,
-      };
-    }
-    case ADD_TOTAL_CART: {
-      const { totalCart } = payload;
-      return {
-        ...state,
-        totalCart,
-        updateSum: false,
       };
     }
     default:

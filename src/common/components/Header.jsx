@@ -30,22 +30,22 @@ export default function Header() {
               className="navItem"
               aria-hidden
             >
-              <Link to="/favoritos" className="navLink">
+              <div className="navLink">
                 {(products.some((product) => product.favorited)) ? <FaHeart className="navIcon" /> : <FaRegHeart className="navIcon" /> }
-              </Link>
+              </div>
             </li>
             <li
               className="navItem"
               aria-hidden
             >
-              <Link to="/carrinho" className="navLink displayCart">
+              <div className="navLink displayCart">
                 <FiShoppingCart className="navIcon" style={{ marginBottom: '.8rem' }} />
                 {(Qty !== 0) && (
                   <div className={(Qty === 0) ? 'numCount' : 'numCount showNumCount'}>
                     {Qty}
                   </div>
                 )}
-              </Link>
+              </div>
             </li>
           </ul>
         </div>

@@ -8,7 +8,6 @@ export default function ProductCard() {
   const {
     products: { products },
     cart: { cart },
-    screen: { carT },
     setProducts,
     setCart,
   } = useContext(store);
@@ -172,17 +171,15 @@ export default function ProductCard() {
                   </div>
                   <p className="parcelCard">{parcel}</p>
                 </div>
-                {(!carT) ? (
-                  <div className="buttonCard">
-                    <button
-                      type="button"
-                      className="buyBtn"
-                      onClick={() => setCart(addCart(CarT(product, cart)))}
-                    >
-                      COMPRAR
-                    </button>
-                  </div>
-                ) : ''}
+                <div className="buttonCard">
+                  <button
+                    type="button"
+                    className="buyBtn"
+                    onClick={() => setCart(addCart(CarT(product, cart)))}
+                  >
+                    COMPRAR
+                  </button>
+                </div>
               </div>
             );
           })}
