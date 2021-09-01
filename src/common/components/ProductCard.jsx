@@ -25,8 +25,8 @@ export default function ProductCard() {
     atualPg: 1,
     qtyPgsFloor: 1,
     initialProd: 0,
-    limitProd: 2,
-    cardsLimit: 2,
+    limitProd: 1,
+    cardsLimit: 1,
   };
 
   const [pages, setPages] = useState(initialPage);
@@ -82,7 +82,7 @@ export default function ProductCard() {
         });
       } else {
         setPages({
-          ...pages, initialProd: 0, limitProd: 2, atualPg: 1,
+          ...pages, initialProd: 0, limitProd: 1, atualPg: 1,
         });
       }
     } else {
