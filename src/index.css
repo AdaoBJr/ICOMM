@@ -220,7 +220,7 @@ button {
   letter-spacing: .10rem;
 }
 
-.cartContainer {
+.homeContainer {
   display: flex;
   justify-content: center;
 }
@@ -333,6 +333,36 @@ button {
 
 .cardContent:hover .topCard {
   margin-top: -2rem;
+}
+
+.pageContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowPage {
+  font-size: 1.9rem;
+}
+
+.numPage {
+  font-size: 1.2rem;
+}
+
+.arrowPage, .numPage {
+  text-align: center;
+  vertical-align: middle;
+  background-color: var(--first-color-dark);
+  color: #FFF;
+  width: 40px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2),
+              0 -2px 3px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.numPage:hover, .arrowPage:hover, .atualPg {
+  background-color: var(--first-color-darken);
 }
 
 

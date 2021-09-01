@@ -37,9 +37,7 @@ export default function Home() {
       {/* <!--========== CAROUSEL ==========--> */}
       <section className="homeContent">
         <h2 className="titleHome">DESTAQUES</h2>
-        <section className="cartContainer">
-          <ProductCard />
-        </section>
+        <ProductCard />
       </section>
     </main>
   );
