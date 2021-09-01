@@ -35,6 +35,8 @@ export default function Provider({ children }) {
     }
   }, []);
 
+  // ---------------------------------------------------------------------------------------------
+
   // CONTEXT
   const contextValue = {
     products,

@@ -5,11 +5,6 @@ import store, { addCart, setFav } from '../../context/store';
 import { CarT, Fav } from '../../functions';
 
 export default function ProductCard() {
-  const initialPage = {
-    qtyPgs: 1, numPgs: [], atualPg: 1, qtyPgsFloor: 1, initialProd: 0, limitProd: 4, cardsLimit: 4,
-  };
-  const [pages, setPages] = useState(initialPage);
-
   const {
     products: { products },
     cart: { cart },
@@ -18,27 +13,79 @@ export default function ProductCard() {
     setCart,
   } = useContext(store);
 
+  const initialPage = {
+    qtyPgs: 1,
+    atualPg: 1,
+    qtyPgsFloor: 1,
+    initialProd: 0,
+    limitProd: 4,
+    cardsLimit: 4,
+  };
+  const initialPageMobile = {
+    qtyPgs: 1,
+    atualPg: 1,
+    qtyPgsFloor: 1,
+    initialProd: 0,
+    limitProd: 2,
+    cardsLimit: 2,
+  };
+
+  const [pages, setPages] = useState(initialPage);
+  const [numPgs, setNumPgs] = useState([]);
+  const [minWidth, setMinWidth] = useState(true);
+
+  // CHECK WIDTH SCREEN ----------------------------------------------------------------------------
+
+  const checkWidthScreen = () => {
+    const MIN_WIDTH = 768;
+    const screenWidth = window.screen.width;
+    // const screenWidth = window.innerWidth;
+
+    if (screenWidth >= MIN_WIDTH) {
+      setMinWidth(true);
+    } else {
+      setMinWidth(false);
+    }
+  };
+
+  const setLimits = () => {
+    if (minWidth) {
+      setPages(initialPage);
+    } else {
+      setPages(initialPageMobile);
+    }
+  };
+
+  // CAROUSEL ----------------------------------------------------------------------------
   const qtyPages = () => {
     const { cardsLimit } = pages;
+
     const qtyPgsFull = products.length / cardsLimit;
     const qtyPgsFloor = Math.floor(qtyPgsFull);
     const qtyPgs = Math.ceil(qtyPgsFull);
 
-    const numPgs = [];
-    for (let i = 1; i <= qtyPgs; i += 1) { numPgs.push(i); }
+    const NumPgs = [];
+    for (let i = 1; i <= qtyPgs; i += 1) { NumPgs.push(i); }
 
     setPages({
-      ...pages, qtyPgs, qtyPgsFloor, numPgs,
+      ...pages, qtyPgs, qtyPgsFloor,
     });
+    setNumPgs(NumPgs);
   };
 
   const nextSlide = () => {
     const { limitProd, cardsLimit, atualPg } = pages;
 
     if (limitProd >= products.length - 1) {
-      setPages({
-        ...pages, initialProd: 0, limitProd: 4, atualPg: 1,
-      });
+      if (minWidth) {
+        setPages({
+          ...pages, initialProd: 0, limitProd: 4, atualPg: 1,
+        });
+      } else {
+        setPages({
+          ...pages, initialProd: 0, limitProd: 2, atualPg: 1,
+        });
+      }
     } else {
       setPages((prevState) => ({
         ...pages,
@@ -82,6 +129,8 @@ export default function ProductCard() {
     });
   };
 
+  // RENDER PRODUCT CARD ---------------------------------------------------------------------------
+
   const classMsgProduct = (msg) => {
     if (msg === 'VERÃO 2022') { return 'msgSummer'; }
     if (msg === 'LANÇAMENTO') { return 'msgLaunch'; }
@@ -91,7 +140,7 @@ export default function ProductCard() {
 
   const renderProductCard = () => {
     const {
-      initialProd, limitProd, numPgs, atualPg,
+      initialProd, limitProd, atualPg,
     } = pages;
     const screenProducts = products.slice(initialProd, limitProd);
     return (
@@ -103,8 +152,8 @@ export default function ProductCard() {
             } = product;
 
             return (
-              <div className="cardContent">
-                <div key={id} className="topCard">
+              <div key={id} className="cardContent">
+                <div className="topCard">
                   <p className={classMsgProduct(msg)}>{msg}</p>
                   <button
                     type="button"
@@ -158,7 +207,10 @@ export default function ProductCard() {
 
   // ----------------------------------------------------------------------------------------------
   // CICLOS DE VIDA
-  useEffect(qtyPages, [products]);
+  useEffect(setLimits, [minWidth]);
+  useEffect(qtyPages, [pages.cardsLimit]);
+  useEffect(checkWidthScreen, []);
+  window.addEventListener('resize', () => checkWidthScreen());
 
   // ----------------------------------------------------------------------------------------------
 
