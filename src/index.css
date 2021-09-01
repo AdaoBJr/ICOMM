@@ -188,6 +188,19 @@ button {
 }
 
 /*========== HOME ==========*/
+
+.homeContent {
+  display: grid;
+  justify-content: center;
+  margin: 2rem 1rem 0 1rem;
+  width: 100vh;
+}
+
+.homeContainer {
+  display: flex;
+  justify-content: center;
+}
+
 .topImages {
   display: grid;
   margin-top: 1rem;
@@ -211,22 +224,11 @@ button {
   color: var(--container-color);
 }
 
-.homeContent {
-  display: grid;
-  justify-content: center;
-  margin-top: var(--mb-2);
-}
-
 .titleHome {
   font-family:var(--body-font);
   letter-spacing: .10rem;
   margin-bottom: var(--mb-1);
   text-align: center;
-}
-
-.homeContainer {
-  display: flex;
-  justify-content: center;
 }
 
 .cardContent {
@@ -353,6 +355,10 @@ button {
 }
 
 .numPage {
+  /* position: relative;
+  bottom: 0;
+  left: 0; */
+  /* z-index: var(--z-fixed); */
   font-size: 1.2rem;
   width: 20px;
   height: 20px;
@@ -382,13 +388,13 @@ button {
 .arrowLeft {
   position: relative;
   top: -20rem;
-  left: -31rem;
+  left: -16rem;
 }
 
 .arrowRight {
   position: relative;
   top: -20rem;
-  right: -32rem;
+  right: -17rem;
 }
 
 
@@ -398,6 +404,11 @@ button {
 @media screen and (min-width: 768px){
 
   /*========== HOME ==========*/
+
+  .homeContent {
+    margin: 2rem auto;
+  }
+
   .topImages {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -415,4 +426,15 @@ button {
     left: 4rem;
     font-size: var(--normal-font-size);
   }
+
+  .arrowLeft {
+    top: -20rem;
+    left: -31rem;
+  }
+  
+  .arrowRight {
+    top: -20rem;
+    right: -32rem;
+  }
+
 }
