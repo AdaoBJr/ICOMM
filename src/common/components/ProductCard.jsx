@@ -51,14 +51,14 @@ export default function ProductCard() {
 
   const prevSlide = () => {
     const {
-      initialProd, cardsLimit, qtyPgsFloor, qtyPgs, atualPg,
+      initialProd, cardsLimit, qtyPgs, atualPg,
     } = pages;
 
     if (initialProd === 0) {
       setPages({
         ...pages,
-        initialProd: cardsLimit * qtyPgsFloor,
-        limitProd: cardsLimit * (qtyPgsFloor) + cardsLimit,
+        initialProd: products.length - cardsLimit,
+        limitProd: products.length,
         atualPg: qtyPgs,
       });
     } else {
@@ -139,7 +139,7 @@ export default function ProductCard() {
           })}
         </div>
         <div className="pageContent">
-          <div><MdKeyboardArrowLeft onClick={prevSlide} className="arrowPage" /></div>
+          <div className="arrowLeft"><MdKeyboardArrowLeft onClick={prevSlide} className="arrowPage" /></div>
           {numPgs.map((num) => (
             <div
               aria-hidden
@@ -150,7 +150,7 @@ export default function ProductCard() {
               {num}
             </div>
           )) }
-          <div><MdKeyboardArrowRight onClick={nextSlide} className="arrowPage" /></div>
+          <div className="arrowRight"><MdKeyboardArrowRight onClick={nextSlide} className="arrowPage" /></div>
         </div>
       </section>
     );
