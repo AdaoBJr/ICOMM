@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
-import { FaHeart } from 'react-icons/fa';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 
 import logo from '../../files/images/logo.png';
@@ -10,6 +10,7 @@ import { showQty } from '../../functions';
 
 export default function Header() {
   const {
+    products: { products },
     cart: { cart },
   } = useContext(store);
 
@@ -29,7 +30,9 @@ export default function Header() {
               className="navItem"
               aria-hidden
             >
-              <Link to="/favoritos" className="navLink"><FaHeart className="navIcon" /></Link>
+              <Link to="/favoritos" className="navLink">
+                {(products.some((product) => product.favorited)) ? <FaHeart className="navIcon" /> : <FaRegHeart className="navIcon" /> }
+              </Link>
             </li>
             <li
               className="navItem"
