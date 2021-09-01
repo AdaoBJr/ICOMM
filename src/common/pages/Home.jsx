@@ -11,33 +11,35 @@ export default function Home() {
       {/* <!--========== HEADER ==========--> */}
       <Header />
 
-      {/* <!--========== IMAGES ==========--> */}
-      <section className="topImages">
-        <div>
-          <p className="titleTopImg">
-            ÍRIS
-            <br />
-            VERÃO
-            <br />
-            2022
-          </p>
-          <img src={img5} alt="imagem destaque 1" />
-        </div>
-        <div>
-          <p className="titleTopImg">
-            <br />
-            LE LIS
-            <br />
-            BLANC
-          </p>
-          <img src={img6} alt="imagem destaque 2" />
-        </div>
-      </section>
+      <section className="home">
+        {/* <!--========== IMAGES ==========--> */}
+        <section className="topImages">
+          <div>
+            <p className="titleTopImg">
+              ÍRIS
+              <br />
+              VERÃO
+              <br />
+              2022
+            </p>
+            <img src={img5} alt="imagem destaque 1" />
+          </div>
+          <div>
+            <p className="titleTopImg">
+              <br />
+              LE LIS
+              <br />
+              BLANC
+            </p>
+            <img src={img6} alt="imagem destaque 2" />
+          </div>
+        </section>
 
-      {/* <!--========== CAROUSEL ==========--> */}
-      <section className="homeContent">
-        <h2 className="titleHome">DESTAQUES</h2>
-        <ProductCard />
+        {/* <!--========== CAROUSEL ==========--> */}
+        <section className="homeContent">
+          <h2 className="titleHome">DESTAQUES</h2>
+          <ProductCard />
+        </section>
       </section>
     </main>
   );
