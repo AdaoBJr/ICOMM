@@ -1,4 +1,4 @@
-<p align="center"><img width='150px' src='https://github.com/AdaoBJr/GoShoesRedux/blob/main/src/files/images/shoes-animation.gif' />
+<p align="center"><img width='150px' src='https://github.com/AdaoBJr/ICOMM/blob/main/src/files/images/animationREADME.gif' />
 <h1 align="center"> ICOMM e-commerce - Responsive Page </h1>
 <h2 align="center">GitHub Pages:</h2>
  
