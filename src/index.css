@@ -95,34 +95,40 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: var(--z-fixed);
+  z-index: var(--z-element2);
   background-color: var(--first-color-dark);
 }
 
+.displayCart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .numCount {
-  z-index: var(--z-element2);
+  position: relative;
+  top: -11px;
+  left: -5px;
   font-size: var(--small-font-size);
   font-weight: var(--font-bold);
   text-align: center;
-  color: var(--title-home-color);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2),
-              0 -2px 5px rgba(0, 0, 0, 0.2);
-  min-width: 1.5rem;
-  padding: 1px 3px;
-  margin: 0 2px;
+  background-color: #EBD7CE;
+  color: var(--title-color);
+  min-width: 1.1rem;
+  min-height: 1.1rem;
   border-radius: 50%;
   opacity: 0;
   transition: 0.5s;
+  z-index: var(--z-fixed);
 }
 
 .numCount:hover {
-  color: var(--container-color);
-  background-color: var(--first-color-darken);
+  color: var(--title-home-color);
+  background-color: var(--container-color);
 }
 
 .showNumCount {
   opacity: 1;
-  bottom: 1.5rem;
   animation-duration: .5s;
   animation-name: animate-num_cart;
 }

@@ -38,8 +38,8 @@ export default function Header() {
               className="navItem"
               aria-hidden
             >
-              <Link to="/carrinho" className="navLink">
-                <FiShoppingCart className="navIcon" />
+              <Link to="/carrinho" className="navLink displayCart">
+                <FiShoppingCart className="navIcon" style={{ marginBottom: '.8rem' }} />
                 {(Qty !== 0) && (
                   <div className={(Qty === 0) ? 'numCount' : 'numCount showNumCount'}>
                     {Qty}
