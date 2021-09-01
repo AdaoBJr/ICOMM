@@ -3,7 +3,7 @@
 <h2 align="center">GitHub Pages:</h2>
  
  <div align="center">
-   <a href="http://adaobjr.github.io/ICOMM/" target="_blank">
+   <a href="https://adaobjr.github.io/ICOMM/" target="_blank">
     <img width='100px' src='https://image.flaticon.com/icons/png/512/5222/5222347.png' target="_blank" />
  </div>
  
@@ -78,7 +78,7 @@ A base de dados da aplicação foi mockada com base nas imagens e textos proveni
 Primeiro faça a clonagem do projeto em algum diretorio do seu computador:
 ```bash
 > cd "users/usuario/desktop/icomm"
-> git clone https://github.com/AdaoBJr/ICOMM.git
+> git clone git@github.com:AdaoBJr/ICOMM.git
 ```
 Depois disso instale as dependências:
 ```bash
