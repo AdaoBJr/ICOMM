@@ -355,9 +355,10 @@ button {
 .arrowPage {
   font-size: 1.9rem;
   width: 50px;
-  height: 65px;
+  height: 380px;
   color: var(--title-color);
   background-color: transparent;
+  /* background-color: #C4C4C4; */
 }
 
 .numPage {
@@ -383,19 +384,19 @@ button {
   user-select: none;
 }
 
-.arrowPage:hover, .atualPg {
+.atualPg {
   background-color: var(--first-color-dark);
 }
 
 .arrowLeft {
   position: relative;
-  top: -20rem;
+  top: -28.8rem;
   left: 5rem;
 }
 
 .arrowRight {
   position: relative;
-  top: -20rem;
+  top: -28.8rem;
   right: 4rem;
 }
 
@@ -435,6 +436,10 @@ button {
     height: 55px;
     background-color: #C4C4C4;
     color: var(--container-color);
+  }
+
+  .arrowPage:hover {
+    background-color: var(--first-color-dark);
   }
 
   .arrowLeft {
