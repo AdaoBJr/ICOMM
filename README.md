@@ -82,6 +82,6 @@ Primeiro faça a clonagem do projeto em algum diretorio do seu computador:
 ```
 Depois disso instale as dependências:
 ```bash
-> npm install install
+> npm install
 ```
 O projeto vai iniciar em http://localhost:3000.
